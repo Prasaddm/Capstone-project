@@ -1,10 +1,11 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
 # Load the saved model
-with open("rf_battery_life_model.pkl", "rb") as file:
-    model = pickle.load(file)
+
+model = joblib.load("rf_battery_life_model.pkl")
+
 
 # Streamlit UI
 st.title("Battery Life Prediction")
